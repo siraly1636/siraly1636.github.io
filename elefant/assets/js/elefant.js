@@ -1,4 +1,4 @@
-fetch("../json/elefant.json")
+fetch("assets/json/elefant.json")
 .then(x => x.json())
 .then(y => elefantJson(y));
 
