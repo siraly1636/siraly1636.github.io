@@ -22,14 +22,12 @@ body{
 @media (max-width: 990px) {
     .img-size{
         height: 110px;
-        padding-bottom: 10px;
         transition: transform .60s;
     }
 }
 @media (min-width: 576px) and (max-width: 762px) {
     .img-size{
         height: 80px;
-        padding-bottom: 10px;
         transition: transform .60s;
     }
 }

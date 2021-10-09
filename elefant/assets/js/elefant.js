@@ -3,7 +3,7 @@ fetch("assets/json/elefant.json")
 .then(y => elefantJson(y));
 
 function elefantJson(adatok){
-    console.log(adatok);
+    //console.log(adatok);
 
     var sz="";
     for (elem of adatok){
