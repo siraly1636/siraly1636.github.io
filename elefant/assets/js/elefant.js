@@ -5,13 +5,15 @@ fetch("assets/json/elefant.json")
 function elefantJson(adatok){
     console.log(adatok);
 
+    var sz="";
     for (elem of adatok){
-        sz+="<tr>";
-        sz+="<td>";
-        sz+=elem.name;
-        sz+="</td>";
-        sz+="</tr>";
- 
+        sz+="<div class='col-sm-4 text-center box'><h4 class='elefant-name'>"+elem.name+"</h4>";
+        sz+="<a target='_blank' href='"+elem.image+"'><img src='"+elem.image+"' class='img-size'></a>";
+        if (elem.wikilink == "Unavailable") {
+            sz+="<p>Nem elérhető</p></div>"
+        }else{
+            sz+="<p class='link'><a target='_blank' href='"+elem.wikilink+"'>Wiki</a></p></div>" 
+        }
     }
-    document.getElementById("torzs").innerHTML=sz;
+    document.getElementById("elefants").innerHTML=sz;
 }
