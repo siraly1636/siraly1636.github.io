@@ -16,3 +16,4 @@ function elefantJson(adatok){
         }
     }
     document.getElementById("elefants").innerHTML=sz;
+}
