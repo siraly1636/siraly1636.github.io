@@ -1,4 +1,4 @@
-fetch("https://elephant-api.herokuapp.com/elephants")
+fetch("../json/elefant.json")
 .then(x => x.json())
 .then(y => elefantJson(y));
 
