@@ -1,4 +1,4 @@
-fetch("elefant.json")
+fetch("https://raw.githubusercontent.com/siraly1636/siraly1636.github.io/main/elefant/assets/json/elefant.json")
 .then(x => x.json())
 .then(y => elefantJson(y));
 
