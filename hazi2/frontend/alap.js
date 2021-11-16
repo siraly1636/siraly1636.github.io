@@ -1,12 +1,12 @@
 // Termékek lekérdezése
-fetch("http://ms-s1.siralycore.hu:25508/termekek")
+fetch("http://ms-s1.mineside.hu:25508/termekek")
 .then(x => x.json())
 .then(y => termek_megjelenit(y));
 
 // Felvitel gombra azonnal frissít
 function update(){
     setTimeout(function () {
-        fetch("http://ms-s1.siralycore.hu:25508/termekek")
+        fetch("http://ms-s1.mineside.hu:25508/termekek")
         .then(x => x.json())
         .then(y => termek_megjelenit(y)); 
     }, 100);
@@ -42,7 +42,7 @@ function termek_felvitel(){
         bevitel4:document.getElementById("bevitel4").value,
         bevitel5:document.getElementById("bevitel5").value
     }
-    fetch("http://ms-s1.siralycore.hu:25508/termek_felvitel", {
+    fetch("http://ms-s1.mineside.hu:25508/termek_felvitel", {
         method: "POST",
         body: JSON.stringify(bemenet),
         headers: {"Content-type": "application/json; charset=UTF-8"}
